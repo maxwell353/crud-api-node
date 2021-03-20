@@ -1,0 +1,23 @@
+{
+  "name": "crud-api-node-vue",
+  "version": "1.0.0",
+  "description": "Desenvolvimento de um crud simples em nodejs como backend e vuejs para front.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxwell353/crud-api-node-vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxwell353/crud-api-node-vue/issues"
+  },
+  "homepage": "https://github.com/maxwell353/crud-api-node-vue#readme",
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  }
+}
