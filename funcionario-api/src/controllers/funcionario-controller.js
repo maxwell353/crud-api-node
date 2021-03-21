@@ -11,14 +11,14 @@ const db = require('../config/database');
 exports.createFuncionario =  async(req, res) =>{
     const { nome, cargo, salario, data_nascimento, codigo_funcionario } = req.body;
     const { rows } = await db.query(
-        "INSERT INTO funcionario (nome, cargo, salario, data_nascimento, codigo_funcionario) VALUES ($1, $2, $3, $4, $5)"
-            [nome, cargo, salario, data_nascimento, codigo_funcionario]
+        "INSERT INTO funcionario (nome, cargo, salario, data_nascimento, codigo_funcionario) VALUES ($1, $2, $3, $4, $5)",
+        [nome, cargo, salario, data_nascimento, codigo_funcionario]
     );
 
     res.status(201).send({
         message: 'Funcionario adicionado com sucesso.',
         body: {
-            funcionario: { nome, cargo, salario, data_nascimento, codigo_funcionario }
+            funcionario: { nome, cargo, salario, data_nascimento, codigo_funcionario },
         },
     });
 };

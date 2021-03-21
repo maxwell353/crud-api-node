@@ -15,9 +15,9 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_URL
 });
 
-pool.on('error', (error, client) => {
-    console.log('Unexpeted error on idle client', error)
-    process.exit(-1)
+pool.on('error', (err, client) => {
+    console.log('Unexpeted error on idle client', err)
+    process.exit(-1);
 });
 
 pool.on('connect', () => {
