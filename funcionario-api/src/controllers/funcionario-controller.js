@@ -28,3 +28,10 @@ exports.listAllFuncionarios = async(req, res) => {
     const response = await db.query('SELECT * FROM funcionario ORDER BY nome ASC');
     res.status(200).send(response.rows);
 };
+
+// ==> Metodo responsavel por listar um determinado 'Funcionario' por Id:
+exports.findFuncionarioById = async(req, res) => {
+    const IdFuncionario = req.params.id;
+    const response = await db.query('SELECT * FROM funcionario WHERE id_funcionario = $1', [IdFuncionario]);
+    res.status(200).send(response.rows);
+};

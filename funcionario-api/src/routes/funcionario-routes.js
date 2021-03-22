@@ -16,4 +16,7 @@ router.post('/funcionarios', funcionarioController.createFuncionario);
 // ==> Rota responsavel por listar todos os 'Colaboradores': (GET): localhost:3000/api/funcionarios
 router.get('/funcionarios', funcionarioController.listAllFuncionarios);
 
+// ==> Rota responsavel por listar um deteterminado 'Colaborador' por Id: (GET): localhost:3000/api/funcionarios/id
+router.get('/funcionarios/:id', funcionarioController.findFuncionarioById);
+
 module.exports = router;
