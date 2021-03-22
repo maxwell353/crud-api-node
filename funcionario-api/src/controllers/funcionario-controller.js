@@ -47,3 +47,10 @@ exports.updateFuncionarioById = async(req, res) => {
 
     res.status(200).send({message: 'Atualização de funcionario realizada com sucesso!'});
 };
+
+// ==>  Metodo responsavel por deletar/excluir um determinado 'Funcionario' por Id:
+exports.deleteFuncionarioById = async(req, res) => {
+    const IdFuncionario = req.params.id;
+    await db.query('DELETE FROM funcionario WHERE id_funcionario = $1', [IdFuncionario]);
+    res.status(200).send({message: 'Funcionario deletado com sucesso!'});
+};
