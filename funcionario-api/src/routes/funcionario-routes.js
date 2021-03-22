@@ -19,4 +19,7 @@ router.get('/funcionarios', funcionarioController.listAllFuncionarios);
 // ==> Rota responsavel por listar um deteterminado 'Colaborador' por Id: (GET): localhost:3000/api/funcionarios/id
 router.get('/funcionarios/:id', funcionarioController.findFuncionarioById);
 
+// ==> Rota responsavel por atualizar um determinado 'Colaborador(a)' por Id: (PUT): localhost:3000/api/funcionarios/id
+router.put('/funcionarios/:id', funcionarioController.updateFuncionarioById);
+
 module.exports = router;

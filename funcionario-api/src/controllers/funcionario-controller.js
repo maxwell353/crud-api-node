@@ -35,3 +35,15 @@ exports.findFuncionarioById = async(req, res) => {
     const response = await db.query('SELECT * FROM funcionario WHERE id_funcionario = $1', [IdFuncionario]);
     res.status(200).send(response.rows);
 };
+
+// ==> Metodo responsavel por atualizar um determinado 'Funcionario' por Id:
+exports.updateFuncionarioById = async(req, res) => {
+    const IdFuncionario = req.params.id;
+    const { nome, cargo, salario, data_nascimento, codigo_funcionario } = req.body;
+    const response = await db.query(
+        'UPDATE funcionario SET nome = $1, cargo = $2, salario = $3, data_nascimento = $4, codigo_funcionario = $5 WHERE id_funcionario = $6',
+        [nome, cargo, salario, data_nascimento, codigo_funcionario, IdFuncionario]
+    );
+
+    res.status(200).send({message: 'Atualização de funcionario realizada com sucesso!'});
+};
