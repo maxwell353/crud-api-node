@@ -22,3 +22,9 @@ exports.createFuncionario =  async(req, res) =>{
         },
     });
 };
+
+// ==> Metodo responsavel por listar todos os 'Funcionarios':
+exports.listAllFuncionarios = async(req, res) => {
+    const response = await db.query('SELECT * FROM funcionario ORDER BY nome ASC');
+    res.status(200).send(response.rows);
+};

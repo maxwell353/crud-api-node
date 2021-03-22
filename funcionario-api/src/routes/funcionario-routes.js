@@ -13,4 +13,7 @@ const funcionarioController = require('../controllers/funcionario-controller');
 // ==> Rota responsavel por criar um novo 'Colaborador(a)' : (POST): localhost:3000/api/funcionarios
 router.post('/funcionarios', funcionarioController.createFuncionario);
 
+// ==> Rota responsavel por listar todos os 'Colaboradores': (GET): localhost:3000/api/funcionarios
+router.get('/funcionarios', funcionarioController.listAllFuncionarios);
+
 module.exports = router;
