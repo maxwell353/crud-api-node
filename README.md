@@ -1,5 +1,5 @@
-# crud-api-node-vue<br>
-Desenvolvimento de um crud simples em nodejs como backend e vuejs para front.<br>
+# crud-api-node<br>
+Desenvolvimento de um crud simples em nodejs.<br>
 
 Banco de dados:<br>
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp"; #executar antes de criar a primeira tabela do banco.<br>
