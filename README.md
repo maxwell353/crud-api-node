@@ -8,4 +8,7 @@ recursos utilizados node:<br>
 npx eslint --init<br>
 npm i --save-dev husky nodemon<br>
 npm i cors dotenv express express-promise-router pg<br>
-npm i eslint-friendly-formatter
+npm i eslint-friendly-formatter<br>
+
+No arquivo .env deve conter a conexão com o banco da seguinte maneira:
+DATABASE_URL=postgres://username:password@host:port/database
